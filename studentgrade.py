@@ -1,12 +1,8 @@
-# ===============================================
-#        STUDENT GRADE CALCULATOR SYSTEM
-# ===============================================
+
 
 import csv
 
-# -------------------------------
-# Function to calculate grade
-# -------------------------------
+
 def calculate_grade(percentage):
     if percentage >= 90:
         return "A+"
@@ -24,9 +20,7 @@ def calculate_grade(percentage):
         return "F"
 
 
-# -------------------------------
-# Function to calculate result
-# -------------------------------
+
 def calculate_result(marks_list):
     for mark in marks_list:
         if mark < 40:
@@ -34,9 +28,7 @@ def calculate_result(marks_list):
     return "PASS"
 
 
-# -------------------------------
-# Function to add student
-# -------------------------------
+
 def add_student():
     student = {}
 
@@ -65,9 +57,7 @@ def add_student():
     return student
 
 
-# -------------------------------
-# Function to display student
-# -------------------------------
+
 def display_student(student):
     print("\n----------------------------------")
     print("Roll Number :", student["roll"])
@@ -101,9 +91,7 @@ def save_to_file(students, filename="student_results.csv"):
     print("Data saved successfully to", filename)
 
 
-# -------------------------------
-# Calculate class average
-# -------------------------------
+
 def class_average(students):
     if len(students) == 0:
         print("No student data available.")
@@ -114,9 +102,7 @@ def class_average(students):
     print("Class Average Percentage:", round(avg, 2), "%")
 
 
-# -------------------------------
-# Main Program
-# -------------------------------
+
 def main():
     students = []
 
@@ -156,6 +142,7 @@ def main():
             print("Invalid choice! Please try again.")
 
 
-# Run the program
+
 if __name__ == "__main__":
     main()
+
